@@ -7,3 +7,5 @@ optuna>=3.5
 matplotlib
 numpy
 pandas
+imageio
+imageio-ffmpeg
