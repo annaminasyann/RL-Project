@@ -1,0 +1,22 @@
+# Environment
+venv/
+.venv/
+env/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runs & outputs (regenerate locally)
+logs/
+figures/
+models/
+tuning/
+results/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

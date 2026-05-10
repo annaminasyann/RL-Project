@@ -1,0 +1,9 @@
+gymnasium[mujoco]>=1.0
+stable-baselines3>=2.3
+torch>=2.0
+tensorboard
+mujoco>=3.0
+optuna>=3.5
+matplotlib
+numpy
+pandas
