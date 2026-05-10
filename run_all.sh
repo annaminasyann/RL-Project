@@ -25,7 +25,7 @@ source venv/bin/activate
 
 echo ">> Installing dependencies..."
 pip install --quiet --upgrade pip
-pip install --quiet -r code/requirements.txt
+pip install --quiet -r requirements.txt
 echo "   Done."
 echo ""
 
@@ -35,28 +35,28 @@ START_TIME=$(date +%s)
 echo "=========================================="
 echo " STAGE 1/3: Hyperparameter tuning (Optuna)"
 echo "=========================================="
-python code/tune.py --algo all
+python tune.py --algo all
 
 # ---------- Step 3: Final training with best params ----------
 echo ""
 echo "=========================================="
 echo " STAGE 2/3: Final training with best params"
 echo "=========================================="
-python code/train.py --algo all
+python train.py --algo all
 
 # ---------- Step 4: Generate figures ----------
 echo ""
 echo "=========================================="
 echo " STAGE 3/3: Generating figures"
 echo "=========================================="
-python code/plot_results.py
+python plot_results.py
 
 # ---------- Step 5: Final evaluation ----------
 echo ""
 echo "=========================================="
 echo " Final evaluation of trained agents"
 echo "=========================================="
-python code/evaluate.py --algo all --seed 0 --episodes 10
+python evaluate.py --algo all --seed 0 --episodes 10
 
 END_TIME=$(date +%s)
 ELAPSED=$((END_TIME - START_TIME))
@@ -79,5 +79,5 @@ echo "View training in TensorBoard:"
 echo "  tensorboard --logdir logs"
 echo ""
 echo "Watch a trained agent run:"
-echo "  python code/evaluate.py --algo sac --seed 0 --render"
+echo "  python evaluate.py --algo sac --seed 0 --render"
 echo ""

@@ -2,7 +2,7 @@ import os
 
 ENV_ID = "HalfCheetah-v5"
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.abspath(__file__))
 LOG_DIR = os.path.join(ROOT, "logs")
 RESULTS_DIR = os.path.join(ROOT, "results")
 FIGURES_DIR = os.path.join(ROOT, "figures")
